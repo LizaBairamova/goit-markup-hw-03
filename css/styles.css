@@ -119,6 +119,7 @@ body {
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
 }
 .order-btn {
   background: var(--accent-color);
@@ -251,9 +252,6 @@ body {
 .team-social-item + .team-social-item {
   margin-left: 10px;
 }
-.team-social-item {
-  margin-bottom: 30px;
-}
 .team-social-link {
   width: 44px;
   height: 44px;
@@ -265,10 +263,11 @@ body {
 }
 
 .team-social-link:hover,
-.team-social-link:focus,
-.team-social-icon:hover,
-.team-social-icon:focus {
+.team-social-link:focus {
   background-color: var(--accent-color);
+}
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
   fill: var(--main-text-color);
 }
 .team-social-icon {
@@ -297,7 +296,7 @@ body {
   margin-left: -30px;
   margin-bottom: -30px;
 }
-.grey-item {
+.benefit-icon {
   background-color: #f5f4fa;
   width: 270px;
   height: 120px;
@@ -306,7 +305,7 @@ body {
   align-items: center;
   margin-bottom: 30px;
 }
-.grey-item + .grey-item {
+.benefit-icon + .benefit-icon {
   margin-left: 30px;
 }
 .grey-list {
@@ -326,7 +325,6 @@ body {
 }
 .clients-list {
   display: flex;
-  justify-content: center;
 }
 .clients-link {
   border: 1px solid #afb1b8;
@@ -338,11 +336,13 @@ body {
   border-radius: 4px;
   color: #afb1b8;
 }
-.clients-link:focus,
 .clients-link:hover,
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--accent-color);
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--main-text-color);
 }
 .client-icon {
   fill: #afb1b8;
@@ -353,12 +353,8 @@ body {
 .clients-item + .clients-item {
   margin-left: 30px;
 }
-.clients-item {
-  padding-bottom: 94px;
-}
 .our-clients-name {
   margin-bottom: 50px;
-  margin-top: 94px;
   text-align: center;
   font-weight: bold;
   color: var(--second-main-color);
@@ -367,15 +363,22 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.our-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /*--Основной контент портфолио--*/
 .img-section-item {
   width: calc(100% / 4 - 30px);
   margin-left: 30px;
 }
-.img-section-item:focus,
-.img-section-item:hover {
+.img-section-item-link:focus,
+.img-section-item-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.img-section-item-link {
+  display: block;
 }
 .btn-name {
   font-weight: 500;
@@ -526,6 +529,7 @@ body {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-social-linl:hover,
 .footer-social-linl:focus,
