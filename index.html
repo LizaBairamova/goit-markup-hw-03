@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   
 <body> 
     <!--Шапка нашего сайта-->
@@ -56,7 +57,7 @@
         <section class="order-section">
          <div class="container">
             <h1 class="order-section-name">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-            <button type="button" class="order-btn">Заказать услугу</button>
+            <button type="button" class="order-btn" data-modal-open>Заказать услугу</button>
          </div>
        </section>
         
@@ -110,9 +111,17 @@
             <div class="container">
             <h2 class="what-we-do-title">Чем мы занимаемся?</h2>
             <ul class="what-we-do-list list">
-                <li class="what-we-do-item"><img class="what-we-do-img" src="./images/img1.jpg" alt="Вид занятия №1" width="370"> </li>
-                <li class="what-we-do-item"><img class="what-we-do-img" src="./images/img2.jpg" alt="Вид занятия №2" width="370"> </li>
-                <li class="what-we-do-item"><img class="what-we-do-img" src="./images/img3.jpg" alt="Вид занятия №3" width="370"> </li>
+                <li class="what-we-do-item">
+                    <img class="what-we-do-img" src="./images/img1.jpg" alt="Вид занятия №1" width="370"><div class="main-info-container-services">
+                        <div class="main-info-container-name">Десктопные приложения</div>
+                    </div> 
+                </li>
+                <li class="what-we-do-item"><img class="what-we-do-img" src="./images/img2.jpg" alt="Вид занятия №2" width="370"><div class="main-info-container-services">
+                    <div class="main-info-container-name">Мобильные приложения</div>
+                </div> </li>
+                <li class="what-we-do-item"><img class="what-we-do-img" src="./images/img3.jpg" alt="Вид занятия №3" width="370"><div class="main-info-container-services">
+                    <div class="main-info-container-name">Дизайнерские решения</div>
+                </div> </li>
             </ul>
             </div>
         </section>
@@ -372,6 +381,16 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden"data-modal>
+        <div class="modal">
+            <button type="button" class="close-modal-btn" data-modal-close>
+                <svg class="close-modal-btn-icon" width="11" height="11">
+                  <use href="./images/symvolicon.svg#icon-Vector"></use>
+                </svg>
+            </button>
+        </div>
+    </div> 
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
